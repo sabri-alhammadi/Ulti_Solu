@@ -2001,40 +2001,21 @@
       </div>
     </div>
 
-    <div class="contact-form reveal" style="transition-delay:0.2s">
-      <h3 style="font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:1.5rem">أرسل لنا رسالة</h3>
-      <div class="form-row">
-        <div class="form-group" style="margin-bottom:0">
-          <label class="form-label">الاسم الكامل</label>
-          <input type="text" class="form-control" placeholder="أدخل اسمك">
-        </div>
-        <div class="form-group" style="margin-bottom:0">
-          <label class="form-label">رقم الجوال</label>
-          <input type="tel" class="form-control" placeholder="+966 5X XXX XXXX">
-        </div>
-      </div>
-      <div class="form-group" style="margin-top:1rem">
-        <label class="form-label">البريد الإلكتروني</label>
-        <input type="email" class="form-control" placeholder="example@email.com">
-      </div>
-      <div class="form-group">
-        <label class="form-label">الخدمة المطلوبة</label>
-        <select class="form-control" style="cursor:pointer">
-          <option value="" style="background:var(--ink-mid)">اختر الخدمة...</option>
-          <option style="background:var(--ink-mid)">موقع إلكتروني</option>
-          <option style="background:var(--ink-mid)">تطبيق جوال</option>
-          <option style="background:var(--ink-mid)">تصميم هوية بصرية</option>
-          <option style="background:var(--ink-mid)">استضافة مواقع</option>
-          <option style="background:var(--ink-mid)">أخرى</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">رسالتك</label>
-        <textarea class="form-control" placeholder="اكتب رسالتك هنا..."></textarea>
-      </div>
-      <button class="form-submit" onclick="handleSubmit(this)">إرسال الرسالة ←</button>
-    </div>
+    <form action="https://formspree.io/f/xojrknrn" method="POST" class="contact-form-wrapper">
+  <div class="form-group">
+    <label for="name">الاسم</label>
+    <input type="text" id="name" name="name" required placeholder="الاسم" />
   </div>
+  <div class="form-group">
+    <label for="email">البريد الإلكتروني</label>
+    <input type="email" id="email" name="email" required placeholder="البريد الإلكتروني" />
+  </div>
+  <div class="form-group">
+    <label for="message">الرسالة</label>
+    <textarea id="message" name="message" required placeholder="اكتب رسالتك هنا"></textarea>
+  </div>
+  <button type="submit" class="btn-primary">إرسال</button>
+</form>
 </section>
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
